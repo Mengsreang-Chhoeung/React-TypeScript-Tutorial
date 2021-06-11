@@ -44,4 +44,4 @@ npm start សម្រាប់ npm ឬ yarn start សម្រាប់ yarn
 
 - បន្ទាប់មក អ្នកបើក Browser ហើយវាយនៅ Address ដែលផ្តល់ដោយ React:
 
-![react-start-console thumbnail](/_thumbnail_doc/start-react-console.jpg "React Start Console")
+![react-start-console thumbnail](/_thumbnail_doc/start-react-console.JPG "React Start Console")
