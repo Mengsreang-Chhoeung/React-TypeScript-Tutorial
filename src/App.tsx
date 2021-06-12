@@ -1,5 +1,8 @@
 import React from 'react';
 import './style.css';
+import HelloClassComponent from './components/classComponents/HelloClassComponent';
+import HelloFunctionComponent from './components/functionComponents/HelloFunctionComponent';
+import Greeting from './components/functionComponents/Greeting';
 
 const App: React.FC = () => {
 
@@ -40,6 +43,15 @@ const App: React.FC = () => {
       {/* Note for attribute htmlFor and className that is for normal html tag are for and class */}
       <label htmlFor="hello">Hello</label>
       <h2 className="world">World</h2>
+
+      {/* Components */}
+      <HelloClassComponent/>
+      <HelloFunctionComponent/>
+
+      {/* Props */}
+      <Greeting greeting={"React JS"} version={17.2}/>
+      <Greeting greeting={"Angular"} version={12.2}/>
+      <Greeting greeting={"Vue JS"} version={3.2}/>
     </React.Fragment>
   );
 };
