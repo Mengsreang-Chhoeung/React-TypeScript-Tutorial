@@ -62,6 +62,8 @@ npm start សម្រាប់ npm ឬ yarn start សម្រាប់ yarn
 
 - រួចកែអក្សរនៅក្នុង `<title></title>` tag:
 
+`public / index.html`
+
 ![react-index-html thumbnail](/_thumbnail_doc/index-html.JPG "React index.html")
 
 - នៅក្នុង Folder `src` មាន file ជាច្រើនដែលយើងមិនត្រូវការប្រើ ចឹងអាចលុប file ទាំងអស់នោះបាន:
@@ -78,9 +80,13 @@ npm start សម្រាប់ npm ឬ yarn start សម្រាប់ yarn
 
 - ពេលមិនទាន់បានលុប
 
+`src / index.tsx`
+
 ![react-index-tsx thumbnail](/_thumbnail_doc/index-tsx-before.JPG "React Index Before Removed Unused Code")
 
 - បន្ទាប់ពីលុបរួច
+
+`src / index.tsx`
 
 ![react-index-tsx thumbnail](/_thumbnail_doc/index-tsx-after.JPG "React Index After Removed Unused Code")
 
@@ -90,12 +96,336 @@ npm start សម្រាប់ npm ឬ yarn start សម្រាប់ yarn
 
 - ពេលមិនទាន់បានលុប
 
+`src / App.tsx`
+
 ![react-app-tsx thumbnail](/_thumbnail_doc/app-tsx-before.JPG "React App Before Removed Unused Code")
 
 - បន្ទាប់ពីលុបរួច
+
+`src / App.tsx`
 
 ![react-app-tsx thumbnail](/_thumbnail_doc/app-tsx-after.JPG "React App After Removed Unused Code")
 
 - បន្ទាប់មកយើងនឹងឃើញលទ្ធផលនៅលើ _Web Browser_ បែបនេះ:
 
 ![react-start-up-page thumbnail](/_thumbnail_doc/react-start-up-page-after-change.JPG "React Start Up Page")
+
+## អ្វីទៅជា JSX?🤔
+
+- **React** ប្រើ _**JSX**_ សម្រាប់បង្កើតជា _UI_ នៅលើ _Web Browser_។ ហើយវាជាជម្រើសដ៏ល្អមួយសម្រាប់ការសរសេរកូដ​ **JavaScript** នៅក្នុង _**JSX**_។
+
+- **JSX** គឺដូចទៅនឹង **HTML** អញ្ចឹង។
+
+- បើសិនជាយើងសរសេរធាតុជាច្រើននៅក្នុង _**JSX**_ យើងត្រូវក្តោបធាតុទាំងអស់នោះនៅក្នុង _Container_ មួយដូច `<div></div>` tag ឬ `<React.Fragment></React.Fragment>` ជាដើម។
+
+`src / App.tsx`
+
+```
+import React from 'react';
+
+const App: React.FC = () => {
+
+  // JSX are in return() method...
+  return (
+    <React.Fragment>
+      <h1>Welcome to React Tutorial😋!</h1>
+      <h2>Coding...</h2>
+      <h2>Eating...</h2>
+      <h2>Sleeping...</h2>
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+- **JavaScript Expression** អាចប្រើនៅក្នុង JSX បានដោយគ្រាន់តែក្តោបនូវកូដ **JavaScript** ជាមួយនឹង _curly brackets_ `{}`:
+
+`src / App.tsx`
+
+```
+import React from 'react';
+
+const App: React.FC = () => {
+  return (
+    <React.Fragment>
+
+      {/* JavaScript Expression in JSX */}
+      <h2>{10 + 20}</h2>
+
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+- យើងមិនអាចប្រើប្រាស់នូវ `if else statement` នៅក្នុង _**JSX**_ បាននោះទេ តែយើងអាចប្រើ `ternary expression` ជំនួសបាន:
+
+`src / App.tsx`
+
+```
+import React from 'react';
+
+const App: React.FC = () => {
+
+  // initial value
+  const i: number = 1;
+
+  return (
+    <React.Fragment>
+
+      {/* Ternary Expression in JSX */}
+      <h2>{i === 1 ? "Hello React" : "Bye TypeScript"}</h2>
+
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+- យើងអាចប្រើប្រាស់ _**CSS**_ បានបីរបៀបដូចទូទៅដែរពោលគឺ _inline, internal និង external_:
+
+- Inline Style:
+
+`src / App.tsx`
+
+```
+import React from 'react';
+
+const App: React.FC = () => {
+  return (
+    <React.Fragment>
+
+      {/* Css Inline Style */}
+      <h2 style={{backgroundColor: 'blue', color: 'white'}}>Bye TypeScript</h2>
+
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+- Internal Style:
+
+`src / App.tsx`
+
+```
+import React from 'react';
+
+const App: React.FC = () => {
+
+  // initial style
+  const myStyle: React.CSSProperties = {
+    backgroundColor: 'red',
+    color: 'white',
+  };
+
+  return (
+    <React.Fragment>
+
+      {/* Css Internal Style */}
+      <h2 style={myStyle}>Hello React</h2>
+
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+- External Style:
+
+`src / App.tsx`
+
+```
+import React from 'react';
+import './style.css';
+
+const App: React.FC = () => {
+  return (
+    <React.Fragment>
+
+      {/* Css External Style */}
+      <h2 className="my__header__style">Love NextJS</h2>
+
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+`src / style.css`
+
+```
+.my__header__style{
+    background-color: green;
+    color: white;
+}
+```
+
+- ពេលដែលយើងចង់ `comment` ទៅលើកូដនៅក្នុង _**JSX**_ គឺយើងដាក់វានៅក្នុង _curly brackets_ ជាមួយនឹង `/* … */` ពោលគឺបែបនេះ `{/* … */}`។
+
+`src / App.tsx`
+
+```
+import React from 'react';
+
+const App: React.FC = () => {
+  return (
+    <React.Fragment>
+
+      {/* This is a comment */}
+
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+- **ចំណាំ** - យើងគួរតែប្រើ `className` និង `htmlFor` _attribute_ ជំនួស `class` និង `for`:
+
+`src / App.tsx`
+
+```
+import React from 'react';
+
+const App: React.FC = () => {
+  return (
+    <React.Fragment>
+
+      {/* Note for attribute htmlFor and className that is for normal html tag are for and class */}
+      <label htmlFor="hello">Hello</label>
+      <h2 className="world">World</h2>
+
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+## អ្វីទៅជា Component?🤔
+
+- **Component** ធ្វើឲ្យយើងអាចបំបែកនូវ _UI_ ទៅជាប្រភេទ _UI_ ដែលមានឯករាជ្យ។
+
+![react-component-structure thumbnail](/_thumbnail_doc/react-component-structure.JPG "React Component Structure")
+
+- នៅក្នុង **React** `component` ត្រូវបានបែងចែកជាពីរគឺ _`Functional Component`_ និង _`Class Based Component`_។
+
+- `Class Based Component:`
+
+`src / components / classComponents / HelloClassComponent.tsx`
+
+```
+import React from 'react';
+
+class HelloClassComponent extends React.Component {
+    render(){
+        return(
+            <React.Fragment>
+                <h1>Hello Class Component🌚!</h1>
+            </React.Fragment>
+        );
+    };
+};
+
+export default HelloClassComponent;
+```
+
+- `Functional Component:`
+
+`src / components / functionComponents / HelloFunctionComponent.tsx`
+
+```
+import React from 'react';
+
+const HelloFunctionComponent: React.FC = () => {
+    return(
+        <React.Fragment>
+            <h1>Hello Function Component🌝!</h1>
+        </React.Fragment>
+    );
+};
+
+export default HelloFunctionComponent;
+```
+
+`src / App.tsx`
+
+```
+import React from 'react';
+import HelloClassComponent from './components/classComponents/HelloClassComponent';
+import HelloFunctionComponent from './components/functionComponents/HelloFunctionComponent';
+
+const App: React.FC = () => {
+  return (
+    <React.Fragment>
+
+      {/* Components */}
+      <HelloClassComponent/>
+      <HelloFunctionComponent/>
+
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+## អ្វីទៅជា​ Props?🤔
+
+- **Props** គឺដូចទៅនឹង _attribute_ របស់ **HTML** អញ្ចឹងដែលវាប្រើសម្រាប់បោះតម្លៃពី _`Parent Component`_ ទៅឲ្យ _`Child Component`_។
+
+`src / App.tsx`
+
+```
+import React from 'react';
+import Greeting from './components/functionComponents/Greeting';
+
+const App: React.FC = () => {
+  return (
+    <React.Fragment>
+
+      {/* Props */}
+      <Greeting greeting={"React JS"} version={17.2}/>
+      <Greeting greeting={"Angular"} version={12.2}/>
+      <Greeting greeting={"Vue JS"} version={3.2}/>
+
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+`src / components / functionComponents / Greeting.tsx`
+
+```
+import React from "react";
+
+// initial props by using interface
+interface GreetingProps{
+    // properties
+    greeting: string;
+    version: number;
+}
+
+const Greeting: React.FC<GreetingProps> = (props) => {
+
+    // given property as props
+    const {greeting, version} = props;
+
+    return(
+        <React.Fragment>
+            <h1>Hello {greeting} Version: {version}.</h1>
+        </React.Fragment>
+    );
+};
+
+export default Greeting;
+```
