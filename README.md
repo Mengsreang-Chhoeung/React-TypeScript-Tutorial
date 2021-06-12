@@ -377,6 +377,8 @@ const App: React.FC = () => {
 export default App;
 ```
 
+- **ចំណាំ** - នៅក្នុង _Tutorial_ មួយនេះ យើងរៀនប្រើតែ _`Functional Component`_ តែមួយគត់។
+
 ## អ្វីទៅជា​ Props?🤔
 
 - **Props** គឺដូចទៅនឹង _attribute_ របស់ **HTML** អញ្ចឹងដែលវាប្រើសម្រាប់បោះតម្លៃពី _`Parent Component`_ ទៅឲ្យ _`Child Component`_។
