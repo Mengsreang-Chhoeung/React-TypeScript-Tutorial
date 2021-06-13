@@ -12,11 +12,11 @@
 
 - ដើម្បីរៀនតាម Tutorial មួយនេះឲ្យកាន់តែឆាប់យល់ ឆាប់ចាប់បាន អ្នកគួរមើលវីដេអូ React Crush Course ខ្លះៗដែរ ដើម្បីជាជំនួយក្នុងការសិក្សាវាបន្ថែម។
 
-`React Crash Course for Beginners 2021 - Learn ReactJS from Scratch in this 100% Free Tutorial! by Maximilian Schwarzmüller`
+> React Crash Course for Beginners 2021 - Learn ReactJS from Scratch in this 100% Free Tutorial! by Maximilian Schwarzmüller
 
 [![react-maximilan-thumbnail](/_thumbnail_doc/react-maximilan.jpg)](https://www.youtube.com/watch?v=Dorf8i6lCuk "React Crash Course for Beginners 2021 - Learn ReactJS from Scratch in this 100% Free Tutorial!")
 
-`React Tutorial - Fundamentals, Hooks, Context API, React Router, Custom Hooks by John Smilga`
+> React Tutorial - Fundamentals, Hooks, Context API, React Router, Custom Hooks by John Smilga
 
 [![react-john-smilga-thumbnail](/_thumbnail_doc/react-john-smigla.jpg)](https://www.youtube.com/watch?v=iZhV0bILFb0&t=17446s "React Tutorial - Fundamentals, Hooks, Context API, React Router, Custom Hooks")
 
