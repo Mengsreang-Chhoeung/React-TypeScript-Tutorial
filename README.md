@@ -10,7 +10,7 @@
 
 ## ជំនួយបន្ថែម:
 
-- ដើម្បីរៀនតាម Tutorial មួយនេះឲ្យកាន់តែឆាប់យល់ ឆាប់ចាប់បាន អ្នកគួរមើលវីដេអូ React Crush Course ខ្លះៗដែរ ដើម្បីជាជំនួយក្នុងការសិក្សាវាបន្ថែម។
+- ដើម្បីរៀនតាម _Tutorial_ មួយនេះឲ្យកាន់តែឆាប់យល់ ឆាប់ចាប់បាន អ្នកគួរមើលវីដេអូ **React Crush Course** ខ្លះៗដែរ ដើម្បីជាជំនួយក្នុងការសិក្សាវាបន្ថែម។
 
 > React Crash Course for Beginners 2021 - Learn ReactJS from Scratch in this 100% Free Tutorial! by Maximilian Schwarzmüller
 
@@ -19,6 +19,8 @@
 > React Tutorial - Fundamentals, Hooks, Context API, React Router, Custom Hooks by John Smilga
 
 [![react-john-smilga-thumbnail](/_thumbnail_doc/react-john-smigla.jpg)](https://www.youtube.com/watch?v=iZhV0bILFb0&t=17446s "React Tutorial - Fundamentals, Hooks, Context API, React Router, Custom Hooks")
+
+- **បញ្ចាក់** : វីដេអូខាងលើប៉ុន្មាននេះ គឺផ្តោតទៅលើការប្រើប្រាស់ React ជាមួយ JavaScript ដូច្នេះ JavaScript គឺមិនខុសគ្នាជាមួយ TypeScript ប៉ុន្មានទេ ដូច្នេះអ្នកអាចរៀនពីការប្រើ React ជាមួយ TypeScript នៅក្នុង _Tutorial_ មួយនេះបាន។
 
 ## តម្រូវការមុននឹងសិក្សា React + TypeScript:
 
