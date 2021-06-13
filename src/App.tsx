@@ -2,6 +2,7 @@ import React from 'react';
 import Greeting from './components/greeting';
 import Counter from './components/counter';
 import InformationForm from './components/informationForm';
+import Dummy from './components/dummy';
 
 const App: React.FC = () => {
 
@@ -17,6 +18,9 @@ const App: React.FC = () => {
 
       {/* Information Form */}
       <InformationForm/>
+
+      {/* Dummy */}
+      <Dummy/>
     </React.Fragment>
   );
 };
