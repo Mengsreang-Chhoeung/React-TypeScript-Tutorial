@@ -685,6 +685,29 @@ const App: React.FC = () => {
 export default App;
 ```
 
+- បន្ទាប់ពីយើងបានសរសេរនូវឧទាហរណ៍ខាងលើរួចមកហើយ យើងបានឃើញថានៅក្នុង file `index.tsx` ហើយនៅក្នុង `interface` គឺមាន `properties` ជាច្រើន តែអ្វីដែលគួរឲ្យកត់សម្គាល់នោះគឺបែបនេះ `name?: string;` ដែលមានសញ្ញា `?` នៅមុខ​ប្រភេទទិន្នន័យ ដែលសញ្ញានេះមានន័យថា យើងចង់​ប្រើ _Props_ នៅក្នុង _Component_ ក៏បាន ឬក៏អត់ក៏មិនអីដែរ។ មួយវិញទៀតគឺយើងនឹងឃើញនៅកន្លែង `useState()`:
+
+```
+const [informationForm, setInformationForm] = useState<InformationFormProps>({
+    name,
+    sex,
+    position,
+});
+```
+
+- `useState()` ខាងលើគឺមានន័យថាយើងយក _Props_ ជាច្រើនមកដាក់ក្នុង **State** រួម និយាយមួយម៉ាត់ឲ្យខ្លីទៅ បើសិនជាយើង​យក​ _Prop_ មួយមកដាក់ក្នុង **State** យើងក៏អាចប្រើវិធីនេះបានដែរ តែត្រូវបន្ថែមនូវ `curly brackets {}` នៅជុំវិញ _Prop_ ផង: `const [informationForm, setInformationForm] = useState<InformationFormProps>({name});` ។ មួយវិញទៀតគឺ នៅក្នុង _method handle_: 
+
+```
+const onHandleNameChange = (e:any) => {
+    setInformationForm({
+        ...informationForm,
+        name: e.target.value
+    });
+};
+```
+
+- `...informationForm` មានន័យថាយកតម្លៃពី _Props_ ផ្សេងៗមកដាក់នៅទីនេះដែរ។
+
 - `useState()` ផ្សេងគ្នា:
 
 `src / components / informationForm / index.tsx`
@@ -779,4 +802,10 @@ const App: React.FC = () => {
 };
 
 export default App;
+```
+
+- នៅឧទាហរណ៍ខាងលើប៉ុន្មាននេះ គឺយើងប្រើ **State** ជាមួយ​ **Props** ច្រើន ហើយលើសពីនេះទៅទៀត​ **State** ក៏អាចប្រើដោយមិនចាំបាច់មាន **Props** បានដែរ:
+
+```
+
 ```
