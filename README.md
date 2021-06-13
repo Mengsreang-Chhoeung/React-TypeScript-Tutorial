@@ -415,7 +415,7 @@ interface GreetingProps{
     // properties
     greeting: string;
     version: number;
-}
+};
 
 const Greeting: React.FC<GreetingProps> = (props) => {
 
