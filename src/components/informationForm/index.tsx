@@ -14,49 +14,49 @@ const InformationForm: React.FC<InformationFormProps> = (props) => {
     const {name = "", sex = "", position = ""} = props;
 
     // given props into state
-    const [informationForm, setInformationForm] = useState<InformationFormProps>({
-        name,
-        sex,
-        position,
-    });
+    // const [informationForm, setInformationForm] = useState<InformationFormProps>({
+    //     name,
+    //     sex,
+    //     position,
+    // });
 
     // given props into state
-    // const [names, setNames] = useState(name);
-    // const [sexes, setSexes] = useState(sex);
-    // const [positions, setPositions] = useState(position);
+    const [names, setNames] = useState(name);
+    const [sexes, setSexes] = useState(sex);
+    const [positions, setPositions] = useState(position);
 
     // handle name change
     const onHandleNameChange = (e:any) => {
-        setInformationForm({
-            ...informationForm,
-            name: e.target.value
-        });
-        // setNames(e.target.value);
+        // setInformationForm({
+        //     ...informationForm,
+        //     name: e.target.value
+        // });
+        setNames(e.target.value);
     };
 
     // handle sex change
     const onHandleSexChange = (e:any) => {
-        setInformationForm({
-            ...informationForm,
-            sex: e.target.value
-        });
-        // setSexes(e.target.value);
+        // setInformationForm({
+        //     ...informationForm,
+        //     sex: e.target.value
+        // });
+        setSexes(e.target.value);
     };
 
     // handle position change
     const onHandlePositionChange = (e:any) => {
-        setInformationForm({
-            ...informationForm,
-            position: e.target.value,
-        });
-        // setPositions(e.target.value);
+        // setInformationForm({
+        //     ...informationForm,
+        //     position: e.target.value,
+        // });
+        setPositions(e.target.value);
     };
 
     // handle form submit
     const onHandleFormSubmit = (e:any) => {
         e.preventDefault();
-        console.log("Data: ", informationForm);
-        // console.log("Data: ", `Fullname: ${names} Sex: ${sexes} Position: ${positions}`);
+        // console.log("Data: ", informationForm);
+        console.log("Data: ", `Fullname: ${names} Sex: ${sexes} Position: ${positions}`);
     };
 
     return(
@@ -78,20 +78,20 @@ const InformationForm: React.FC<InformationFormProps> = (props) => {
             </form>
 
             {/* set condition if name and sex and position are empty string, the div element display empty and if those are not empty, the div element diplay those informations */}
-            {
+            {/* {
                 informationForm.name === "" && informationForm.position === "" && informationForm.sex === "" ?
                 <div></div>
                 :
                 <div>Fullname: {informationForm.name} Sex: {informationForm.sex} Position: {informationForm.position}</div>
-            }
+            } */}
 
             {/* set condition if name and sex and position are empty string, the div element display empty and if those are not empty, the div element diplay those informations */}
-            {/* {
+            {
                 names === "" && sexes === "" && positions === "" ?
                 <div></div>
                 :
                 <div>Fullname: {names} Sex: {sexes} Position: {positions}</div>
-            } */}
+            }
         </React.Fragment>
     );
 };
