@@ -431,3 +431,62 @@ const Greeting: React.FC<GreetingProps> = (props) => {
 
 export default Greeting;
 ```
+
+## អ្វីទៅជា State?🤔
+
+- **State** ជាកន្លែងសម្រាប់ផ្ទុកទិន្នន័យ និងផ្លាស់ប្តូរទិន្នន័យបាន តាមអ្វីដែលយើងចង់ផ្លាស់ប្តូរ។ បើសិនជាយើងមិនប្រើ **State** ទេ ពេលដែលយើងចង់ផ្លាស់ប្តូរទិន្នន័យនៅលើ _User Interface_ គឺមិនអាចផ្លាស់ប្តូរបាននោះទេ ដូច្នេះតម្រូវការត្រូវឲ្យប្រើ **State** ជាចាំបាច់។
+
+- ខាងក្រោមនេះគឺជាឧទាហរណ៏ទាក់ទងនឹងការប្រើប្រាស់ **State** ជាមួយនឹង **Props** ដោយប្រើ `useState()` hook:
+
+`src / components / greeeting / index.tsx`
+
+```
+import React, {useState} from "react";
+
+// initial props by using interface
+interface GreetingProps{
+    // properties
+    greeting: string;
+    version: number;
+};
+
+const Greeting: React.FC<GreetingProps> = (props) => {
+
+    // given property as props
+    const {greeting, version} = props;
+
+    // given props into state
+    const [greets, setGreets] = useState(greeting);
+    const [verions, setVersions] = useState(version);
+
+    return(
+        <React.Fragment>
+            <h1>Hello {greets} Version: {verions}.</h1>
+        </React.Fragment>
+    );
+};
+
+export default Greeting;
+```
+
+`src / App.tsx`
+
+```
+import React from 'react';
+import Greeting from './components/greeting';
+
+const App: React.FC = () => {
+
+  return (
+    <React.Fragment>
+      <Greeting greeting={"React JS"} version={17.2}/>
+      <Greeting greeting={"Angular"} version={12.2}/>
+      <Greeting greeting={"Vue JS"} version={3.2}/>
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+- បន្ទាប់ពីយើងបានសរសេរនូវឧទាហរណ៍ខាងលើរួចមកហើយ យើងបានឃើញថាការប្រើ State គឺយើងប្រើ `useState()` ដែលជា _method_ របស់ `React Hook`។ នៅក្នុងនោះ `const [greets, setGreets] = useState(greeting);` យើងឃើញថាគឺដូចទៅនឹងការបង្កើតអញ្ញាតធម្មតាចឹង ប៉ុន្តែការប្រកាសឈ្មោះអញ្ញតមួយនេះគឺមានពីរដែលផ្ទុកនៅក្នុង `square brackets []` ហើយឈ្មោះអញ្ញាតទាំងពីរនោះគឺសុទ្ធតែមានតួនាទីខុសគ្នាទាំងពីរ ពោលគឺ `greets` ប្រើសម្រាប់ទទួលតម្លៃរីឯ `setGreets` ប្រើសម្រាប់កំណត់តម្លៃ។ ចំណែកឯនៅក្នុង `useState(greeting)` គឺតម្លៃនៅក្នុង `useState()` គឺជាតម្លៃ _default_។​ នៅឧទាហរណ៍ខាងក្រោមទៀត យើងបានយល់ច្រើនទាក់ទងនឹងតម្លៃ _default_ មួយនេះ។
