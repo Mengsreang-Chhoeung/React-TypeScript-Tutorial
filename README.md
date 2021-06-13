@@ -2,6 +2,12 @@
 
 ![react-typescript thumbnail](/_thumbnail_doc/react-typescript.jpg "React TypeScript Tutorial")
 
+## រៀនតាមរយះ Source Code នៅក្នុង Github Branches Repository:
+
+- **Source Code** គឺមានទៅតាម _Branches_ នីមួយៗទៅតាមមេរៀន ដូច្នេះអ្នកអាចរើសតាម _Branches_ បាន!
+
+![github-repository-branches thumbnail](/_thumbnail_doc/github-branches.JPG "Github Branches Repository")
+
 ## តម្រូវការមុននឹងសិក្សា React + TypeScript:
 
 - មុននឹងអ្នកអាចរៀននឹង **React JS** បាន អ្នកត្រូវមានចំណេះដឹងទាក់ទងនឹងភាសា _JavaScript, HTML និង CSS_ ជាមុនសិន។ បើទោះបីជា **React JS** មិនប្រើប្រាស់ **HTML** ក្តី តែវាប្រើ **JSX** ដែលវាដូចទៅនឹង **HTML** ដែរ ដូច្នេះ **HTML** គឺនៅតែជាចំណេះដឹងដែលសំខាន់សម្រាប់អ្នក។ យើងនៅតែប្រើប្រាស់ **CSS** ដដែល សម្រាប់កំណត់ _Style_ ទៅឲ្យ **Web page** ហើយចំណែកឯ **JavaScript** វិញគឺយើងអាចប្រើបានទាំងពីរ Versions ពោលគឺ _**ES5**_ និង _**ES6**_។
@@ -490,3 +496,68 @@ export default App;
 ```
 
 - បន្ទាប់ពីយើងបានសរសេរនូវឧទាហរណ៍ខាងលើរួចមកហើយ យើងបានឃើញថាការប្រើ State គឺយើងប្រើ `useState()` ដែលជា _method_ របស់ `React Hook`។ នៅក្នុងនោះ `const [greets, setGreets] = useState(greeting);` យើងឃើញថាគឺដូចទៅនឹងការបង្កើតអញ្ញាតធម្មតាចឹង ប៉ុន្តែការប្រកាសឈ្មោះអញ្ញតមួយនេះគឺមានពីរដែលផ្ទុកនៅក្នុង `square brackets []` ហើយឈ្មោះអញ្ញាតទាំងពីរនោះគឺសុទ្ធតែមានតួនាទីខុសគ្នាទាំងពីរ ពោលគឺ `greets` ប្រើសម្រាប់ទទួលតម្លៃរីឯ `setGreets` ប្រើសម្រាប់កំណត់តម្លៃ។ ចំណែកឯនៅក្នុង `useState(greeting)` គឺតម្លៃនៅក្នុង `useState()` គឺជាតម្លៃ _default_។​ នៅឧទាហរណ៍ខាងក្រោមទៀត យើងបានយល់ច្រើនទាក់ទងនឹងតម្លៃ _default_ មួយនេះ។
+
+- ខាងក្រោមនេះគឺជាឧទាហរណ៏ទាក់ទងនឹងការកំណត់តម្លៃទៅឲ្យ **State**:
+
+`src / components / counter / index.tsx`
+
+```
+import React, {useState} from "react";
+
+// initial props by using interface
+interface CounterProps{
+    // properties
+    count: number;
+};
+
+const Counter: React.FC<CounterProps> = (props) => {
+
+    // given property as props
+    const {count} = props;
+
+    // given props into state
+    const [counts, setCounts] = useState(count);
+
+    // handle decrement clicked
+    const onHandleDecrement = () => {
+        setCounts(counts - 1);
+    }
+
+    // handle increment clicked
+    const onHandleIncrement = () => {
+        setCounts(counts + 1);
+    }
+
+    return(
+        <React.Fragment>
+            <div style={{display: 'flex', alignItems: 'center', width: 100, justifyContent: 'space-around'}}>
+                <button onClick={onHandleDecrement}>-</button>
+                <h4>{counts}</h4>
+                <button onClick={onHandleIncrement}>+</button>
+            </div>
+        </React.Fragment>
+    );
+};
+
+export default Counter;
+```
+
+`src / App.tsx`
+
+```
+import React from 'react';
+import Counter from './components/counter';
+
+const App: React.FC = () => {
+
+  return (
+    <React.Fragment>
+      <Counter count={0}/>
+    </React.Fragment>
+  );
+};
+
+export default App;
+```
+
+- បន្ទាប់ពីយើងបានសរសេរនូវឧទាហរណ៍ខាងលើរួចមកហើយ យើងបានឃើញថាការកំណត់តម្លៃទៅឲ្យ **State** គឺតាមរយះ _event_ ដែលយើងឃើញនៅក្នុង _methods_ ពីរ​គឺ `onHandleDecrement` និង `onHandleIncrement`។ 
