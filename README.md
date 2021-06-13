@@ -671,7 +671,7 @@ const App: React.FC = () => {
 export default App;
 ```
 
-- `useState()` រួមគ្នា:
+- `useState()` ផ្សេងគ្នា:
 
 `src / components / informationForm / index.tsx`
 
