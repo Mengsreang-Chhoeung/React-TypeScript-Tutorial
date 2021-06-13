@@ -1,6 +1,7 @@
 import React from 'react';
 import Greeting from './components/greeting';
 import Counter from './components/counter';
+import InformationForm from './components/informationForm';
 
 const App: React.FC = () => {
 
@@ -13,6 +14,9 @@ const App: React.FC = () => {
       
       {/* Counter */}
       <Counter count={0}/>
+
+      {/* Information Form */}
+      <InformationForm/>
     </React.Fragment>
   );
 };
