@@ -8,6 +8,14 @@
 
 ![github-repository-branches thumbnail](/_thumbnail_doc/github-branches.JPG "Github Branches Repository")
 
+## ជំនួយបន្ថែម:
+
+- ដើម្បីរៀនតាម Tutorial មួយនេះឲ្យកាន់តែឆាប់យល់ ឆាប់ចាប់បាន អ្នកគួរមើលវីដេអូ React Crush Course ខ្លះៗដែរ ដើម្បីជាជំនួយក្នុងការសិក្សាវាបន្ថែម។
+
+[![react-maximilan-thumbnail](/_thumbnail_doc/react-maximilan.jpg)](https://www.youtube.com/watch?v=Dorf8i6lCuk "React Crash Course for Beginners 2021 - Learn ReactJS from Scratch in this 100% Free Tutorial!")
+
+[![react-john-smigla-thumbnail](/_thumbnail_doc/react-john-smigla.jpg)](https://www.youtube.com/watch?v=iZhV0bILFb0&t=17446s "React Tutorial - Fundamentals, Hooks, Context API, React Router, Custom Hooks")
+
 ## តម្រូវការមុននឹងសិក្សា React + TypeScript:
 
 - មុននឹងអ្នកអាចរៀននឹង **React JS** បាន អ្នកត្រូវមានចំណេះដឹងទាក់ទងនឹងភាសា _JavaScript, HTML និង CSS_ ជាមុនសិន។ បើទោះបីជា **React JS** មិនប្រើប្រាស់ **HTML** ក្តី តែវាប្រើ **JSX** ដែលវាដូចទៅនឹង **HTML** ដែរ ដូច្នេះ **HTML** គឺនៅតែជាចំណេះដឹងដែលសំខាន់សម្រាប់អ្នក។ យើងនៅតែប្រើប្រាស់ **CSS** ដដែល សម្រាប់កំណត់ _Style_ ទៅឲ្យ **Web page** ហើយចំណែកឯ **JavaScript** វិញគឺយើងអាចប្រើបានទាំងពីរ Versions ពោលគឺ _**ES5**_ និង _**ES6**_។
