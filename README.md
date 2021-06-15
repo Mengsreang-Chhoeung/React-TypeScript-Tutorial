@@ -44,7 +44,7 @@
 
 ## តើធ្វើយ៉ាងមិចបានអាចសរសេរ React + TypeScript បាន?🤔
 
-- ត្រូវចំណាំថា ដើម្បីសរសេរ **React** បានយើងត្រូវការបង្កើត _Project_ របស់ **React** ដោយប្រើប្រាស់ _**Command Prompt**_ ឬ _**Git Bash**_។ តែមុននឹងបង្កើត _Project_ យើងត្រូវទាញយកនូវ **NodeJS** មកក្នុងកុំព្យូទ័ររបស់សិន: https://nodejs.org/en/
+- ត្រូវចំណាំថា ដើម្បីសរសេរ **React** បានយើងត្រូវការបង្កើត _Project_ របស់ **React** ដោយប្រើប្រាស់ _**Command Prompt**_ ឬ _**Git Bash**_។ តែមុននឹងបង្កើត _Project_ យើងត្រូវទាញយកនូវ **NodeJS** មកក្នុងកុំព្យូទ័ររបស់អ្នកសិន: https://nodejs.org/en/
 - បន្ទាប់ពីបានទាញយកនូវ **NodeJS** បានជោគជ័យ យើងត្រូវទាញយកនៅ _**packages manager(npm or yarn)**_។ សម្រាប់ _npm_ គឺវាមានស្រាច់មកជាមួយ **NodeJS** ដែលយើងបានទាញយកគន្លងមក តែបើចង់ប្រើប្រាស់ _yarn_ វិញយើងត្រូវទាញយកវាបន្ថែមទៀត: https://classic.yarnpkg.com/en/docs/install។
 - បន្ទាប់ពីបានទាញយកនូវ **NodeJS** និង **Packages Manager** រួចរាល់មកហើយ ចំណុចបន្ទាប់គឺយើងបង្កើត _React Project_ ដែលមាន _Command_ ដូចខាងក្រោម:
 
