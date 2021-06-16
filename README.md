@@ -48,17 +48,17 @@
 - បន្ទាប់ពីបានទាញយកនូវ **NodeJS** បានជោគជ័យ យើងត្រូវទាញយកនៅ _**packages manager(npm or yarn)**_។ សម្រាប់ _npm_ គឺវាមានស្រាច់មកជាមួយ **NodeJS** ដែលយើងបានទាញយកគន្លងមក តែបើចង់ប្រើប្រាស់ _yarn_ វិញយើងត្រូវទាញយកវាបន្ថែមទៀត: https://classic.yarnpkg.com/en/docs/install។
 - បន្ទាប់ពីបានទាញយកនូវ **NodeJS** និង **Packages Manager** រួចរាល់មកហើយ ចំណុចបន្ទាប់គឺយើងបង្កើត _React Project_ ដែលមាន _Command_ ដូចខាងក្រោម:
 
-```
+```js
 npx create-react-app projectname --template typescript : សម្រាប់អ្នកប្រើប្រាស់ npm។
 ```
 
-```
+```js
 yarn create react-app projectname --template typescript : សម្រាប់អ្នកប្រើប្រាស់ yarn។
 ```
 
 - បន្ទាប់ពីបង្កើត _Project_ រួចហើយយើងធ្វើការ `cd projectname` ដើម្បីចូលទៅក្នុង _Project Folder_ នោះបន្ទាប់មកយើង _Run Project_ ដោយប្រើ _command_
 
-```
+```js
 npm start សម្រាប់ npm ឬ yarn start សម្រាប់ yarn
 ```
 
@@ -140,7 +140,7 @@ npm start សម្រាប់ npm ឬ yarn start សម្រាប់ yarn
 
 `src / App.tsx`
 
-```
+```js
 import React from 'react';
 
 const App: React.FC = () => {
@@ -163,7 +163,7 @@ export default App;
 
 `src / App.tsx`
 
-```
+```js
 import React from 'react';
 
 const App: React.FC = () => {
