@@ -10,7 +10,7 @@
 
 ## ជំនួយបន្ថែម:
 
-- ដើម្បីរៀនតាម _Tutorial_ មួយនេះឲ្យកាន់តែឆាប់យល់ ឆាប់ចាប់បាន អ្នកគួរមើលវីដេអូ **React Crush Course** ខ្លះៗដែរ ដើម្បីជាជំនួយក្នុងការសិក្សាវាបន្ថែម។
+- ដើម្បីរៀនតាម _Tutorial_ មួយនេះឲ្យកាន់តែឆាប់យល់ ឆាប់ចាប់បាន អ្នកគួរមើលវីដេអូ **React Crush Course** ខ្លះៗដែរ ដើម្បីជាជំនួយក្នុងការសិក្សាវាបន្ថែម។ ខាងក្រោមនេះគឺជាវីដេអូ: 👇
 
 > React Crash Course for Beginners 2021 - Learn ReactJS from Scratch in this 100% Free Tutorial! by Maximilian Schwarzmüller
 
@@ -20,7 +20,7 @@
 
 [![react-john-smilga-thumbnail](/_thumbnail_doc/react-john-smigla.jpg)](https://www.youtube.com/watch?v=iZhV0bILFb0&t=17446s "React Tutorial - Fundamentals, Hooks, Context API, React Router, Custom Hooks")
 
-- **បញ្ចាក់** : វីដេអូខាងលើប៉ុន្មាននេះ គឺផ្តោតទៅលើការប្រើប្រាស់ React ជាមួយ JavaScript ដូច្នេះ JavaScript គឺមិនខុសគ្នាជាមួយ TypeScript ប៉ុន្មានទេ ដូច្នេះអ្នកអាចរៀនពីការប្រើ React ជាមួយ TypeScript នៅក្នុង _Tutorial_ មួយនេះបាន។
+- **បញ្ចាក់** : វីដេអូខាងលើ 👆 ប៉ុន្មាននេះ គឺផ្តោតទៅលើការប្រើប្រាស់ React ជាមួយ JavaScript ដូច្នេះ JavaScript គឺមិនខុសគ្នាជាមួយ TypeScript ប៉ុន្មានទេ ដូច្នេះអ្នកអាចរៀនពីការប្រើ React ជាមួយ TypeScript នៅក្នុង _Tutorial_ មួយនេះបាន។
 
 ## តម្រូវការមុននឹងសិក្សា React + TypeScript:
 
@@ -28,17 +28,17 @@
 
 # ចំណុចពិសេសរបស់ React + TypeScript:
 
-- **JSX – JSX** គឺជា **_JavaScript syntax extension_**។ វាប្រើសម្រាប់សរសេរកូដ _**XML**_ ដើម្បីបង្ហាញលទ្ធផលនៅលើ _Browser_។
-- **Components** – នៅក្នុង **React** អ្វីៗទាំងអស់សុទ្ធតែជា **_Components_** ទាំងអស់។ ដូច្នេះការបង្កើត _Web page_ នៅក្នុង **React** គឺយើងសរសេរវាជា _**Components**_ នីមួយៗឲ្យដាច់ពីគ្នា។
+- **JSX – JSX** គឺជា **_JavaScript XML_**។ វាប្រើសម្រាប់សរសេរកូដ _**XML**_ ដើម្បីបង្ហាញលទ្ធផលនៅលើ _Browser_។
+- **Components** – នៅក្នុង **React** អ្វីៗទាំងអស់សុទ្ធតែជា **_Components_** ទាំងអស់។ ដូច្នេះការបង្កើត _Web page_ នៅក្នុង **React** គឺយើងបង្កើតវាជា _**Components**_ នីមួយៗឲ្យដាច់ពីគ្នា។
 - **License** – **React** បង្កើតឡើងដោយក្រុមហ៊ុន **Facebook** នៅថ្ងៃទី២៩ ខែឧសភា ឆ្នាំ២០១៣។
 
 ## អ្វីទៅជា React?😯
 
-- **React** ជា _library_ របស់ **JavaScript** ដែលប្រើសម្រាប់យកមកបង្កើតជា _**User Interface**_ របស់ _**Website**_។
+- **React** ជា _library_ របស់ **JavaScript** ដែលប្រើសម្រាប់យកមកបង្កើតជា _**User Interface**_ នៅក្នុង _**Website**_។
 
 ## អ្វីទៅជា TypeScript?😲
 
-- **TypeScript** គឺដូចទៅចឹង **JavaScript** ដែរ ចំណុចដែលខុសគ្នានោះគឺថា ការសរសេរកូដដោយប្រើ **TypeScript** គឺប្រើប្រភេទទិន្នន័យត្រឹមត្រូវ តែបើ **JavaScript** វិញគឺចង់ប្រើប្រភេទទិន្នន័យអ្វីក៏បាន។
+- **TypeScript** គឺដូចទៅនឹង **JavaScript** ដែរ ចំណុចដែលខុសគ្នានោះគឺថា ការសរសេរកូដដោយប្រើ **TypeScript** គឺប្រើប្រភេទទិន្នន័យត្រឹមត្រូវ តែបើ **JavaScript** វិញគឺចង់ប្រើប្រភេទទិន្នន័យអ្វីក៏បាន គឺគ្មានការបញ្ជាក់អំពីប្រភេទទិន្នន័យឲ្យបានច្បាស់លាស់ឲ្យដូចទៅនឹង **TypeScript** នោះទេ។
 
 - **TypeScript** មិនអាចប្រតិបត្តិកូដរបស់ខ្លួនទៅលើ _Web Browser_ បាននោះទេ ដូច្នេះ **TypeScript** ត្រូវបំលែងកូដទាំងនោះទៅជាកូដរបស់ **JavaScript** ដើម្បីអាចប្រតិបត្តិនៅលើ _Web Browser_ បាន។
 
