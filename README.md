@@ -56,7 +56,9 @@ npx create-react-app projectname --template typescript : សម្រាប់�
 yarn create react-app projectname --template typescript : សម្រាប់អ្នកប្រើប្រាស់ yarn។
 ```
 
-- បន្ទាប់ពីបង្កើត _Project_ រួចហើយយើងធ្វើការ `cd projectname` ដើម្បីចូលទៅក្នុង _Project Folder_ នោះបន្ទាប់មកយើង _Run Project_ ដោយប្រើ _command_
+> បញ្ជាក់: `npx create-react-app ឬ yarn create react-app` គឺជា command ដែលប្រើសម្រាប់បង្កើត Project ហើយ `projectname` គឺជាឈ្មោះ Project ដែលយើងចង់ដាក់ ដូច្នេះយើងចង់ដាក់ឈ្មោះអ្វីំគឺតាមចិត្តរបស់យើង រីឯ `--template typescript` គឺមានន័យថាយើងបង្កើត Project React ដោយមានការ​ configuration ជាមួយ TypeScript ស្រាប់ៗ។
+
+- ហើយបន្ទាប់ពីបង្កើត _Project_ រួចហើយយើងធ្វើការ `cd projectname` ដើម្បីចូលទៅក្នុង _Project Folder_ នោះបន្ទាប់មកយើង _Run Project_ ដោយប្រើ _command_
 
 ```js
 npm start សម្រាប់ npm ឬ yarn start សម្រាប់ yarn
@@ -72,6 +74,8 @@ npm start សម្រាប់ npm ឬ yarn start សម្រាប់ yarn
 
 ## រៀបចំ Project Folder ឲ្យបានត្រឹមត្រូវ:🤭
 
+> សម្រាប់ IDE ឬ Editor អ្នកគួរតែជ្រើសយក Visual Studio Code: https://code.visualstudio.com/
+
 - ខាងក្រោមនេះគឺជា _Project Folder_ ដែល **React** បានផ្តល់ឲ្យ:
 
 ![react-project-folder thumbnail](/_thumbnail_doc/react-project-folder.JPG "React Project Folder")
@@ -86,45 +90,53 @@ npm start សម្រាប់ npm ឬ yarn start សម្រាប់ yarn
 
 ![react-index-html thumbnail](/_thumbnail_doc/index-html.JPG "React index.html")
 
+#
+
 - នៅក្នុង Folder `src` មាន file ជាច្រើនដែលយើងមិនត្រូវការប្រើ ចឹងអាចលុប file ទាំងអស់នោះបាន:
 
-- ពេលមិនទាន់បានលុប
+> ពេលមិនទាន់បានលុប
 
 ![react-src-folder thumbnail](/_thumbnail_doc/src-folder-before.JPG "React Src Folder Before Removed")
 
-- បន្ទាប់ពីលុបរួច
+> បន្ទាប់ពីលុបរួច
 
 ![react-src-folder thumbnail](/_thumbnail_doc/src-folder-after.JPG "React Src Folder After Removed")
 
+#
+
 - ចូលទៅក្នុង `index.tsx` នៅក្នុង folder `src` ហើយធ្វើការលុបកូដដែលយើងមិនត្រូវប្រើ:
 
-- ពេលមិនទាន់បានលុប
+> ពេលមិនទាន់បានលុប
 
 `src / index.tsx`
 
 ![react-index-tsx thumbnail](/_thumbnail_doc/index-tsx-before.JPG "React Index Before Removed Unused Code")
 
-- បន្ទាប់ពីលុបរួច
+> បន្ទាប់ពីលុបរួច
 
 `src / index.tsx`
 
 ![react-index-tsx thumbnail](/_thumbnail_doc/index-tsx-after.JPG "React Index After Removed Unused Code")
 
-- បញ្ជាក់បន្តិចទាក់ទងនឹង file `index.tsx` ខាងលើនេះ ដែល file មួយនេះមានតួនាទីដើរតួជា _main program_ នៅក្នុង **React** ដោយសារតែ វាបានចាប់ file `index.html` ដែលស្ថិតនៅក្នុង folder `public` ដែលក្នុងនោះគឺមាន `<div id="root"></div>` ដូច្នេះវាបានចាប់ _id_ `root` តាមរយះនឹងមក ហើយយកមក _render_ ក្នុង **App Component** ដែលស្ថិតនៅក្នុង file `App.tsx`។
+> បញ្ជាក់បន្តិចទាក់ទងនឹង file `index.tsx` ខាងលើនេះ ដែល file មួយនេះមានតួនាទីដើរតួជា _main program_ នៅក្នុង **React** ដោយសារតែ វាបានចាប់ file `index.html` ដែលស្ថិតនៅក្នុង folder `public` ដែលក្នុងនោះគឺមាន `<div id="root"></div>` ដូច្នេះវាបានចាប់ _id_ `root` តាមរយះនឹងមក ហើយយកមក _render_ ក្នុង **App Component** ដែលស្ថិតនៅក្នុង file `App.tsx`។
+
+#
 
 - ចូលទៅក្នុង `App.tsx` នៅក្នុង folder `src` ហើយធ្វើការលុបកូដដែលយើងមិនត្រូវប្រើ:
 
-- ពេលមិនទាន់បានលុប
+> ពេលមិនទាន់បានលុប
 
 `src / App.tsx`
 
 ![react-app-tsx thumbnail](/_thumbnail_doc/app-tsx-before.JPG "React App Before Removed Unused Code")
 
-- បន្ទាប់ពីលុបរួច
+> បន្ទាប់ពីលុបរួច
 
 `src / App.tsx`
 
 ![react-app-tsx thumbnail](/_thumbnail_doc/app-tsx-after.JPG "React App After Removed Unused Code")
+
+#
 
 - បន្ទាប់មកយើងនឹងឃើញលទ្ធផលនៅលើ _Web Browser_ បែបនេះ:
 
@@ -136,7 +148,7 @@ npm start សម្រាប់ npm ឬ yarn start សម្រាប់ yarn
 
 - **JSX** គឺដូចទៅនឹង **HTML** អញ្ចឹង។
 
-- បើសិនជាយើងសរសេរធាតុជាច្រើននៅក្នុង _**JSX**_ យើងត្រូវក្តោបធាតុទាំងអស់នោះនៅក្នុង _Container_ មួយដូច `<div></div>` tag ឬ `<React.Fragment></React.Fragment>` ជាដើម។
+- បើសិនជាយើងសរសេរធាតុជាច្រើននៅក្នុង _**JSX**_ យើងត្រូវក្តោបធាតុទាំងអស់នោះនៅក្នុង _Container_ មួយដូច `<div></div>` tag ឬ `<React.Fragment></React.Fragment>` ជាដើម ដែល `<React.Fragment></React.Fragment>` គឺជាធាតុដែល **React** បានផ្តល់ឲ្យ។
 
 `src / App.tsx`
 
@@ -159,6 +171,8 @@ const App: React.FC = () => {
 export default App;
 ```
 
+#
+
 - **JavaScript Expression** អាចប្រើនៅក្នុង JSX បានដោយគ្រាន់តែក្តោបនូវកូដ **JavaScript** ជាមួយនឹង _curly brackets_ `{}`:
 
 `src / App.tsx`
@@ -180,11 +194,13 @@ const App: React.FC = () => {
 export default App;
 ```
 
+#
+
 - យើងមិនអាចប្រើប្រាស់នូវ `if else statement` នៅក្នុង _**JSX**_ បាននោះទេ តែយើងអាចប្រើ `ternary expression` ជំនួសបាន:
 
 `src / App.tsx`
 
-```
+```js
 import React from 'react';
 
 const App: React.FC = () => {
@@ -205,13 +221,15 @@ const App: React.FC = () => {
 export default App;
 ```
 
-- យើងអាចប្រើប្រាស់ _**CSS**_ បានបីរបៀបដូចទូទៅដែរពោលគឺ _inline, internal និង external_:
+#
 
-- Inline Style:
+- យើងអាចប្រើប្រាស់ _**CSS**_ បានបីរបៀបដូចទូទៅដែរ ពោលគឺ _inline, internal និង external_:
+
+> Inline Style:
 
 `src / App.tsx`
 
-```
+```js
 import React from 'react';
 
 const App: React.FC = () => {
@@ -228,11 +246,11 @@ const App: React.FC = () => {
 export default App;
 ```
 
-- Internal Style:
+> Internal Style:
 
 `src / App.tsx`
 
-```
+```js
 import React from 'react';
 
 const App: React.FC = () => {
@@ -256,11 +274,11 @@ const App: React.FC = () => {
 export default App;
 ```
 
-- External Style:
+> External Style:
 
 `src / App.tsx`
 
-```
+```js
 import React from 'react';
 import './style.css';
 
@@ -280,18 +298,20 @@ export default App;
 
 `src / style.css`
 
-```
+```js
 .my__header__style{
     background-color: green;
     color: white;
 }
 ```
 
+#
+
 - ពេលដែលយើងចង់ `comment` ទៅលើកូដនៅក្នុង _**JSX**_ គឺយើងដាក់វានៅក្នុង _curly brackets_ ជាមួយនឹង `/* … */` ពោលគឺបែបនេះ `{/* … */}`។
 
 `src / App.tsx`
 
-```
+```js
 import React from 'react';
 
 const App: React.FC = () => {
@@ -307,11 +327,13 @@ const App: React.FC = () => {
 export default App;
 ```
 
-- **ចំណាំ** - យើងគួរតែប្រើ `className` និង `htmlFor` _attribute_ ជំនួស `class` និង `for`:
+#
+
+> **ចំណាំ** - យើងគួរតែប្រើ `className` និង `htmlFor` _attribute_ ជំនួស `class` និង `for`:
 
 `src / App.tsx`
 
-```
+```js
 import React from 'react';
 
 const App: React.FC = () => {
@@ -328,6 +350,8 @@ const App: React.FC = () => {
 
 export default App;
 ```
+
+#
 
 ## អ្វីទៅជា Component?🤔
 
