@@ -361,11 +361,11 @@ export default App;
 
 - នៅក្នុង **React** `component` ត្រូវបានបែងចែកជាពីរគឺ _`Functional Component`_ និង _`Class Based Component`_។
 
-- `Class Based Component:`
+> Class Based Component:
 
 `src / components / classComponents / HelloClassComponent.tsx`
 
-```
+```js
 import React from 'react';
 
 class HelloClassComponent extends React.Component {
@@ -381,11 +381,11 @@ class HelloClassComponent extends React.Component {
 export default HelloClassComponent;
 ```
 
-- `Functional Component:`
+> Functional Component:
 
 `src / components / functionComponents / HelloFunctionComponent.tsx`
 
-```
+```js
 import React from 'react';
 
 const HelloFunctionComponent: React.FC = () => {
@@ -401,7 +401,7 @@ export default HelloFunctionComponent;
 
 `src / App.tsx`
 
-```
+```js
 import React from 'react';
 import HelloClassComponent from './components/classComponents/HelloClassComponent';
 import HelloFunctionComponent from './components/functionComponents/HelloFunctionComponent';
@@ -421,7 +421,11 @@ const App: React.FC = () => {
 export default App;
 ```
 
-- **ចំណាំ** - នៅក្នុង _Tutorial_ មួយនេះ យើងរៀនប្រើតែ _`Functional Component`_ តែមួយគត់។
+- ដូចដែរយើងបានឃើញនៅខាងលើ `Class Based Component` គឺប្រើប្រាស់ _Class_ សម្រាប់បង្កើត _Component_ រីឯ `Functional Component` វិញគឺប្រើប្រាស់ _Function_ សម្រាប់បង្កើត _Component_ ហើយនៅពេលដែល _Components_ ទាំងពីរត្រូវបានបង្កើតរួចស្រាច់ហើយ អ្នកត្រូវហៅ _Components_ ទាំងនោះមកដាក់ក្នុង `App Component` ដែលជា _main component_ ហើយកុំភ្លេច `import` ផង។
+
+> **ចំណាំ** - នៅក្នុង _Tutorial_ មួយនេះ យើងរៀនប្រើតែ _`Functional Component`_ តែមួយគត់។
+
+#
 
 ## អ្វីទៅជា​ Props?🤔
 
@@ -429,7 +433,7 @@ export default App;
 
 `src / App.tsx`
 
-```
+```js
 import React from 'react';
 import Greeting from './components/functionComponents/Greeting';
 
@@ -451,7 +455,7 @@ export default App;
 
 `src / components / functionComponents / Greeting.tsx`
 
-```
+```js
 import React from "react";
 
 // initial props by using interface
@@ -484,7 +488,7 @@ export default Greeting;
 
 `src / components / greeeting / index.tsx`
 
-```
+```js
 import React, {useState} from "react";
 
 // initial props by using interface
@@ -515,7 +519,7 @@ export default Greeting;
 
 `src / App.tsx`
 
-```
+```js
 import React from 'react';
 import Greeting from './components/greeting';
 
@@ -539,7 +543,7 @@ export default App;
 
 `src / components / counter / index.tsx`
 
-```
+```js
 import React, {useState} from "react";
 
 // initial props by using interface
@@ -582,7 +586,7 @@ export default Counter;
 
 `src / App.tsx`
 
-```
+```js
 import React from 'react';
 import Counter from './components/counter';
 
@@ -606,7 +610,7 @@ export default App;
 
 `src / components / informationForm / index.tsx`
 
-```
+```js
 import React, { useState } from "react";
 
 // initial props by using interface
@@ -693,7 +697,7 @@ export default InformationForm;
 
 `src / App.tsx`
 
-```
+```js
 import React from 'react';
 import InformationForm from './components/informationForm';
 
@@ -711,7 +715,7 @@ export default App;
 
 - បន្ទាប់ពីយើងបានសរសេរនូវឧទាហរណ៍ខាងលើរួចមកហើយ យើងបានឃើញថានៅក្នុង file `index.tsx` ហើយនៅក្នុង `interface` គឺមាន `properties` ជាច្រើន តែអ្វីដែលគួរឲ្យកត់សម្គាល់នោះគឺបែបនេះ `name?: string;` ដែលមានសញ្ញា `?` នៅមុខ​ប្រភេទទិន្នន័យ ដែលសញ្ញានេះមានន័យថា យើងចង់​ប្រើ _Props_ នៅក្នុង _Component_ ក៏បាន ឬក៏អត់ក៏មិនអីដែរ។ មួយវិញទៀតគឺយើងនឹងឃើញនៅកន្លែង `useState()`:
 
-```
+```js
 const [informationForm, setInformationForm] = useState<InformationFormProps>({
     name,
     sex,
@@ -721,7 +725,7 @@ const [informationForm, setInformationForm] = useState<InformationFormProps>({
 
 - `useState()` ខាងលើគឺមានន័យថាយើងយក _Props_ ជាច្រើនមកដាក់ក្នុង **State** រួម និយាយមួយម៉ាត់ឲ្យខ្លីទៅ បើសិនជាយើង​យក​ _Prop_ មួយមកដាក់ក្នុង **State** យើងក៏អាចប្រើវិធីនេះបានដែរ តែត្រូវបន្ថែមនូវ `curly brackets {}` នៅជុំវិញ _Prop_ ផង: `const [informationForm, setInformationForm] = useState<InformationFormProps>({name});` ។ មួយវិញទៀតគឺ នៅក្នុង _method handle_: 
 
-```
+```js
 const onHandleNameChange = (e:any) => {
     setInformationForm({
         ...informationForm,
@@ -736,7 +740,7 @@ const onHandleNameChange = (e:any) => {
 
 `src / components / informationForm / index.tsx`
 
-```
+```js
 import React, { useState } from "react";
 
 // initial props by using interface
@@ -812,7 +816,7 @@ export default InformationForm;
 
 `src / App.tsx`
 
-```
+```js
 import React from 'react';
 import InformationForm from './components/informationForm';
 
@@ -830,7 +834,7 @@ export default App;
 
 - នៅឧទាហរណ៍ខាងលើប៉ុន្មាននេះ គឺយើងប្រើ **State** ជាមួយ​ **Props** ច្រើន ហើយលើសពីនេះទៅទៀត​ **State** ក៏អាចប្រើដោយមិនចាំបាច់មាន **Props** បានដែរ:
 
-```
+```js
 import React, { useState } from "react";
 
 const Dummy: React.FC = () => {
@@ -869,7 +873,7 @@ export default Dummy;
 
 - បន្ទាប់ពីយើងបានសរសេរនូវឧទាហរណ៍ខាងលើរួចមកហើយ យើងបានឃើញថានៅក្នុង file `index.tsx` នៅកន្លែង `useState()` គឺបែបនេះ 
 
-```
+```js
 const [greeting, setGreeting] = useState<string | any>("Hello React");
 ``` 
 
